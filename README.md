@@ -1,6 +1,8 @@
 # Assistant Assembly
-*"Assistants... assemble!"* ~CaptAIn America
+![GitHub License](https://img.shields.io/github/license/Feamaika/Assistant_Assembly)  
 
+
+*"Assistants... assemble!"* ~CaptAIn America
 
 Custom AI agents for IDEs are mostly Markdown and metadata. I wanted to share a small, GitHub-first collection of shareable GitHub Copilot custom agents and related guidance. I made these using VS Code, but the format is also useable with Cursor or OpenCode.  
 
