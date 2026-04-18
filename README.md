@@ -33,20 +33,6 @@ Assistant_Assembly/
   README.md
 ```
 
-## How to use
-
-### Option 1: Use this repo as its own workspace
-
-Open this folder in VS Code. Because the agent lives at `.github/agents/agent-builder.agent.md`, it can be discovered as a workspace custom agent.
-
-### Option 2: Copy the Agent into another repository
-
-Copy `.github/agents/agent-builder.agent.md` into the target repository's `.github/agents/` folder.
-
-### Option 3: Keep a personal copy
-
-If you want the agent available across projects, keep a personal copy in your VS Code user customization location for custom agents.
-
 ## What Agent Builder does
 
 `Agent Builder` is designed to:
@@ -57,13 +43,47 @@ If you want the agent available across projects, keep a personal copy in your VS
 - Improve discoverability with better descriptions and trigger words.
 - Decide whether the user really needs an agent or should use instructions, a prompt, or a skill instead.
 
-## Example prompts
+### Example prompts
 
 See `examples/agent-builder-prompts.md` for copy-paste prompt patterns.
+
+## What UI Translator does
+
+`UI Translator` is designed to:
+
+- Translate visible UI text from one language to another.
+- Preserve logic, structure, identifiers, and behavior.
+- Keep repeated terms and interface copy consistent across files.
+- Leave brand names, placeholders, and ambiguous domain terms alone unless the user says otherwise.
+
+
+## How to use
+### Option 1: Quick install
+
+Use the buttons below to install an agent directly into VS Code.
+
+| Agent | Install |
+|-------|---------|
+| **Agent Builder** | [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://aka.ms/awesome-copilot/install/agent?url=vscode%3Achat-agent%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2FFeamaika%2FAssistant_Assembly%2Fmain%2F.github%2Fagents%2Fagent-builder.agent.md)  |
+| **UI Translator** | [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://aka.ms/awesome-copilot/install/agent?url=vscode%3Achat-agent%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2FFeamaika%2FAssistant_Assembly%2Fmain%2F.github%2Fagents%2Fui-translator.agent.md)  |
+
+### Option 2: Manual setup
+
+Choose manual setup if you want to inspect, edit, version, or reuse the agent files yourself.
+
+- **Workspace-local:** open this repository in VS Code. Agents placed in `.github/agents/` can be discovered as workspace custom agents.
+- **Repo-local:** copy one or both agent files from `.github/agents/` into another repository's `.github/agents/` folder.
+- **Personal:** keep one or both agent files in your VS Code user custom agents location to make them available across projects.
+
+Current agent files:
+
+- `.github/agents/agent-builder.agent.md`
+- `.github/agents/ui-translator.agent.md`
+
 
 
 ## Future additions
 
-- ~~A second or third agent so the repo becomes a real collection.~~
-- A lightweight install script for Windows and macOS.
+- ~~A lightweight install script.~~
+- Agents to add to the collection.
 - A changelog for changes to shared agents.
