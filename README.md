@@ -13,8 +13,9 @@ This repository is meant to stay simple:
 
 ## Current Contents
 
-Two AI agents:
+There are currently 3 AI agents:
 - `Agent Builder`: a special custom agent for creating, reviewing, and tightening other `.agent.md` files.
+- `PR Reviewer`: a custom agent that reviews a PR's code changes in the context of the linked work item and the PR description, surfacing potential misalignments, risks, and open questions in clear language.
 - `UI Translator`: a custom agent that checks and translates a solution's front-end language, that was created by `Agent Builder`
 
 
@@ -25,6 +26,7 @@ Assistant_Assembly/
   .github/
     agents/
       agent-builder.agent.md
+      pr_reviewer.agent.md
       ui-translator.agent.md
   examples/
     agent-builder-prompts.md
@@ -47,6 +49,11 @@ Assistant_Assembly/
 
 See `examples/agent-builder-prompts.md` for copy-paste prompt patterns.
 
+## What PR Reviewer does
+`PR Reviewer` is designed to:
+- Review a Pull Request's code changes in the context of the linked work item and the PR description, using read-only Azure DevOps tools when available.
+- Surface potential misalignments, risks, and open questions in clear language.
+
 ## What UI Translator does
 
 `UI Translator` is designed to:
@@ -65,6 +72,7 @@ Use the buttons below to install an agent directly into VS Code.
 | Agent | Install |
 |-------|---------|
 | **Agent Builder** | [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://aka.ms/awesome-copilot/install/agent?url=vscode%3Achat-agent%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2FFeamaika%2FAssistant_Assembly%2Fmain%2F.github%2Fagents%2Fagent-builder.agent.md)  |
+| **PR Reviewer** | [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://aka.ms/awesome-copilot/install/agent?url=vscode%3Achat-agent%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2FFeamaika%2FAssistant_Assembly%2Fmain%2F.github%2Fagents%2Fpr_reviewer.agent.md)  |
 | **UI Translator** | [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://aka.ms/awesome-copilot/install/agent?url=vscode%3Achat-agent%2Finstall%3Furl%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2FFeamaika%2FAssistant_Assembly%2Fmain%2F.github%2Fagents%2Fui-translator.agent.md)  |
 
 ### Option 2: Manual setup
@@ -78,6 +86,7 @@ Choose manual setup if you want to inspect, edit, version, or reuse the agent fi
 Current agent files:
 
 - `.github/agents/agent-builder.agent.md`
+- `.github/agents/pr_reviewer.agent.md`
 - `.github/agents/ui-translator.agent.md`
 
 
@@ -85,5 +94,5 @@ Current agent files:
 ## Future additions
 
 - ~~A lightweight install script.~~
-- Agents to add to the collection.
+- ~~Agents to add to the collection.~~
 - A changelog for changes to shared agents.
